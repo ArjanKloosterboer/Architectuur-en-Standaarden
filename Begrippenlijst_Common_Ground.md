@@ -5,6 +5,7 @@ Aan een ieder die hieraan bij kan dragen het verzoek om waar nodig aan te vullen
 
 ## API
 Een application programming interface (API) is een verzameling definities op basis waarvan een computerprogramma kan communiceren met een ander programma of onderdeel (meestal in de vorm van bibliotheken). Vaak vormen API's de scheiding tussen verschillende lagen van abstractie, zodat applicaties op een hoog niveau van abstractie kunnen werken en het minder abstracte werk uitbesteden aan andere programma's. Hierdoor hoeft bijvoorbeeld een tekenprogramma niet te weten hoe het de printer moet aansturen, maar roept het daarvoor een gespecialiseerd stuk software aan in een bibliotheek, via een afdruk-API.
+
 bron: https://nl.wikipedia.org/wiki/Application_programming_interface 
 
 Wanneer we spreken over "API's", als alternatief op of vervanging van StUF Soap "services", bedoelen we kleine, scherp gedefinieerde, voor een businessbehoefte doelmatige en voor consumers van de API/service eenvoudig te begrijpen en eenvoudig te implementeren services. Waar StUF services (en de StUF standaard) meer ontworpen zijn met het oog op hergebruik voor providers van services, worden API's ontworpen op eenvoud van gebruik.
@@ -12,14 +13,35 @@ Wanneer we spreken over "API's", als alternatief op of vervanging van StUF Soap 
 ## Bronsystemen
 Een Bronsysteem is het systeem waaruit een gegeven afkomstig is. Voor elk soort gegeven moet er voor een gemeente één bron zijn. Er zijn bronnen voor landelijke basisgegevens en voor gemeentelijke kerngegeven. Bronsystemen kunnen buitengemeentelijk zijn zoals basisregistraties, of binnengemeentelijk. Voor gegevens die binnengemeentelijk worden vastgelegd, maar ook tussen gemeenten beschikbaar moeten zijn, kunnen landelijke voorzieningen dienen als gedelegeerde bron voor de buitengemeentelijke gegevens.
 
+## Conceptueel informatiemodel
+Modellering van de werkelijkheid binnen het beschouwde domein, v.w.b. informatie daarvan, onafhankelijk van ontwerp van en implementatie in systemen. Het geeft een zo getrouw mogelijke beschrijving van die werkelijkheid en is in natuurlijke taal geformuleerd. 
+Een dergelijk model definieert het ‘wat’: welke ‘concepten’ (‘dingen’)  worden onderscheiden (in de beschouwde werkelijkheid), wat betekenen zij, hoe verhouden ze zich tot elkaar en welke informatie (eigenschappen) is daarvan relevant. Het dient als taal waarmee domeinexperts kunnen communiceren met informatie-analisten en verschaft een eenduidige interpretatie van die werkelijkheid ten behoeve van deze communicatie. Een conceptueel informatiemodel wordt dan ook opgesteld voor gebruik door mensen, zodat ‘de business’ en de ICT-specialisten elkaar gaan begrijpen.
+
+bron: Meta-informatiemodel (MIM); Kadaster, VNG Realisatie & Geonovum, 2017
+Synoniem(en): Semantisch informatiemodel (SIM); Informatiemodel
+
 ## Entiteittype
 In een Semantisch Informatiemodel (SIM) worden gegevens en hun relaties beschreven. Groepen samenhangende gegevens met eigenschappen van een in de werkelijkheid bestaand object, noemen we een objecttype. Het gaat om de structuur en relaties, niet om concrete instances van het objecttype. Dus bijvoorbeeld om een "ingeschreven natuurlijk persoon", niet om de persoon "Jan de Vries" (elke overeenkomst van deze voorbeeldnaam met een werkelijk bestaand persoon berust op louter toeval).
 Wanneer een objecttype wordt vertaald naar een structuur in een bericht, noemen we dit een entiteittype. Een entiteittype is dus vertaling van een objecttype naar de structuur waarin deze kan worden opgenomen in een bericht voor gegevensuitwisseling in een API of service.
+
+## Gegevensmodel
+Synoniem van: Logisch informatiemodel
+
+## Informatiemodel
+Synoniem van: Conceptueel informatiemodel
 
 ## JSON
 JSON of JavaScript Object Notation, is een gestandaardiseerd gegevensformaat. JSON maakt gebruik van voor de mens leesbare tekst in de vorm van data-objecten die bestaan uit een of meer attributen met bijbehorende waarden. Het wordt hoofdzakelijk gebruikt voor uitwisseling van data tussen server en webapplicatie, als een alternatief voor xml.
 
 bron: https://nl.wikipedia.org/wiki/JSON 
+
+## Logisch informatiemodel
+Beschrijft hoe de, in het conceptueel informatiemodel onderscheiden, concepten gebruikt worden bij de interactie tussen systemen en hun gebruikers en tussen systemen onderling. Anders gezegd, een model van de representatie van informatie over de werkelijkheid in digitale registraties en in de uitwisseling daartussen. 
+Het gaat hierbij, in tegenstelling tot een conceptueel informatiemodel, dus veel meer om het ‘hoe’. Het slaat de brug tussen werkelijkheid en systemen maar beschrijft nog niet de implementatie in die systemen. Een dergelijk model wordt in een formele taal beschreven en wordt waar mogelijk gegenereerd vanuit het conceptueel model. Het logisch informatiemodel wordt opgesteld voor ICT-interoperabiliteit, voor gebruik door met name de ontwerpers, bouwers en beheerders van ICT-voorzieningen.
+
+bron: Meta-informatiemodel (MIM); Kadaster, VNG Realisatie & Geonovum, 2017
+Synoniem(en): Gegevensmodel
+Specialisatie(s): Uitwisselings gegevensmodel (UGM)
 
 ## NLX
 NLX is an open source inter-organisational system facilitating federated authentication, secure connecting and protocolling in a large-scale, dynamic API landscape.
@@ -55,13 +77,18 @@ Een RESTful API is een application program interface (API) die gebruik maakt van
 
 bron: http://searchmicroservices.techtarget.com/definition/RESTful-API 
 
-## Semantisch Informatie model (SIM)
-Een Semantisch Informatiemodel (SIM) of conceptueel gegevensmodel definieert welke gegevens in een informatiesysteem vastgelegd kunnen worden, hoe deze gegevens gestructureerd zijn en wat de verbanden zijn tussen die gegevens. Een Semantisch Informatiemodel ligt steeds aan de basis van een in de werkelijkheid gerealiseerde implementatie en is in feite het hoog-niveauontwerp van een (doorgaans relationele) databank. 
+## Semantisch informatiemodel (SIM)
+Synoniem van: Conceptueel informatiemodel
 
-bron: https://nl.wikipedia.org/wiki/Conceptueel_datamodel
+## Technisch datamodel
+Specificeert de structuur en eigenschappen van de technologie waarin de informatie wordt vastgelegd of uitgewisseld. Dit is sterk afhankelijk van de gebruikte opslagtechnologie zoals een specifieke database of de servicetechnologie zoals XML, GML, SOAP, REST, (Geo)JSON, LinkedData e.d. Het kan tevens informatie bevatten over de manier waarop berichten ‘verpakt’ worden, het (internet)protocol en de logistiek van het berichtenverkeer. De technische specificaties worden over het algemeen zoveel als mogelijk gegenereerd uit het logisch informatiemodel. Deze specificaties worden opgesteld voor ‘machines’, te gebruiken door software-ontwikkelaars.
 
-## UitwisselingsGegevensModel (UGM)
-In een Uitwisselingsgegevensmodel (UGM) worden de gegevens en relaties zoals deze in een Semantisch Informatiemodel (SIM) zijn beschreven geoptimaliseerd voor gegevensuitwisseling. Normaliter zal een gegeven in het UGM gelijk zijn aan hetzelfde gegeven in het bijbehorende SIM. Qua enkelvoudige gegevens (elementen) vinden onder andere de volgende optimalisaties plaats: 
+Synoniemen: Technisch gegevensmodel; Fysiek datamodel; Fysiek gegevensmodel
+bron: Meta-informatiemodel (MIM); Kadaster, VNG Realisatie & Geonovum, 2017
+
+## Uitwisselings gegevensModel (UGM)
+Specialisatie van: Logisch informatiemodel
+In een Uitwisselingsgegevensmodel (UGM) worden de gegevens en relaties zoals deze in een conceptueel informatiemodel zijn beschreven geoptimaliseerd voor gegevensuitwisseling. Normaliter zal een gegeven in het UGM gelijk zijn aan hetzelfde gegeven in het bijbehorende SIM. Qua enkelvoudige gegevens (elementen) vinden onder andere de volgende optimalisaties plaats: 
 
 * namen met spaties worden geconverteerd naar camelCase, 
 * formaten worden formeel gespecificeerd door middel van "patterns".  
